@@ -75,11 +75,11 @@ export default class TransactionScreen extends Component {
   };
 
   initiateBookIssue = () => {
-    console.log("Book issued to the student!");
+    console.log("Libro emitido al alumno");
   };
 
   initiateBookReturn = () => {
-    console.log("Book returned to the library!");
+    console.log("Libro devuelto a la biblioteca");
   };
 
   render() {
@@ -103,7 +103,7 @@ export default class TransactionScreen extends Component {
             <View style={styles.textinputContainer}>
               <TextInput
                 style={styles.textinput}
-                placeholder={"Book Id"}
+                placeholder={"Id del libro"}
                 placeholderTextColor={"#FFFFFF"}
                 value={bookId}
               />
@@ -111,13 +111,13 @@ export default class TransactionScreen extends Component {
                 style={styles.scanbutton}
                 onPress={() => this.getCameraPermissions("bookId")}
               >
-                <Text style={styles.scanbuttonText}>Scan</Text>
+                <Text style={styles.scanbuttonText}>Escanear</Text>
               </TouchableOpacity>
             </View>
             <View style={[styles.textinputContainer, { marginTop: 25 }]}>
               <TextInput
                 style={styles.textinput}
-                placeholder={"Student Id"}
+                placeholder={"Id del alumno"}
                 placeholderTextColor={"#FFFFFF"}
                 value={studentId}
               />
@@ -125,14 +125,14 @@ export default class TransactionScreen extends Component {
                 style={styles.scanbutton}
                 onPress={() => this.getCameraPermissions("studentId")}
               >
-                <Text style={styles.scanbuttonText}>Scan</Text>
+                <Text style={styles.scanbuttonText}>Escanear</Text>
               </TouchableOpacity>
             </View>
             <TouchableOpacity
               style={[styles.button, { marginTop: 25 }]}
               onPress={this.handleTransaction}
             >
-              <Text style={styles.buttonText}>Submit</Text>
+              <Text style={styles.buttonText}>Enviar</Text>
             </TouchableOpacity>
           </View>
         </ImageBackground>
